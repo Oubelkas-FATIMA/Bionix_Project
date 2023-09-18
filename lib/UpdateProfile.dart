@@ -21,7 +21,7 @@ class updateProfile extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             children: <Widget>[
               InkWell(
@@ -76,16 +76,19 @@ class updateProfile extends StatelessWidget {
                     padding: EdgeInsets.symmetric(vertical: 40),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment
-                            .start, // Align children to the start (left)
+                            .center, // Align children to the start (left)
 
                         children: <Widget>[
-                          const Text(
-                            'Profile',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25,
-                                color: Colors.green),
+                          const Align(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              'Edit Profile',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.green),
+                            ),
                           ),
                           Stack(children: [
                             SizedBox(

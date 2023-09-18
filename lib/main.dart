@@ -46,9 +46,9 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const ProfilePage(),
-      // child: const MyHomePage(),
-      // child: const SettingsFourPage(),
+      // child: const ProfilePage(),
+      child: const MyHomePage(),
+      // child: const SettingsPage(),
       // child: const editProfile(),
       // child: const homePage(),
     );

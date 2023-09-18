@@ -50,26 +50,28 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: EdgeInsets.symmetric(vertical: 40),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment
-                            .start, // Align children to the start (left)
+                            .center, // Align children to the start (left)
 
                         children: <Widget>[
-                          const Text(
-                            'Profile',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25,
-                                color: Colors.green),
+                          const Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Profile',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.green),
+                            ),
                           ),
                           Stack(children: [
                             SizedBox(
-                              width: 120,
-                              height: 120,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(100),
-                                child: const Image(
-                                    image:
-                                        AssetImage("../images/OUBELKAS.jpg")),
+                              width: 0.18.sh,
+                              height: 0.18.sh,
+                              child: const ClipOval(
+                                child: Image(
+                                  image: AssetImage("../images/OUBELKAS.jpg"),
+                                ),
                               ),
                             ),
                             Positioned(

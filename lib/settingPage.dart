@@ -29,88 +29,96 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
         ),
       ),
-      body: Container(
-        padding: const EdgeInsets.only(left: 16, top: 25, right: 16),
-        child: ListView(
-          children: [
-            const Text(
-              "Settings",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Row(
-              children: const [
-                Icon(
-                  Icons.person,
-                  color: Colors.green,
-                ),
-                SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  "Account",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            const Divider(
-              height: 15,
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            buildAccountOptionRow(context, "Change password"),
-            buildAccountOptionRow(context, "Content settings"),
-            buildAccountOptionRow(context, "Social Media"),
-            buildAccountOptionRow(context, "Language"),
-            buildAccountOptionRow(context, "Privacy and Policy"),
-            const SizedBox(
-              height: 40,
-            ),
-            Row(
-              children: const [
-                Icon(
-                  Icons.volume_up_outlined,
-                  color: Colors.green,
-                ),
-                SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  "Notifications",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            const Divider(
-              height: 15,
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            buildNotificationOptionRow("New update", true),
-            buildNotificationOptionRow("Account Status", false),
-            const SizedBox(
-              height: 50,
-            ),
-            Center(
-              child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                onPressed: () {},
-                child: const Text("Lagout",
-                    style: TextStyle(
-                        fontSize: 16, letterSpacing: 2.2, color: Colors.black)),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 40),
+        child: Container(
+          padding: const EdgeInsets.only(left: 16, top: 25, right: 16),
+          child: ListView(
+            children: [
+              const Text(
+                'Settings',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                    color: Colors.green),
               ),
-            )
-          ],
+              const SizedBox(
+                height: 40,
+              ),
+              const Row(
+                children: [
+                  Icon(
+                    Icons.person,
+                    color: Colors.green,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "Account",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              const Divider(
+                height: 15,
+                thickness: 2,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              buildAccountOptionRow(context, "Change password"),
+              buildAccountOptionRow(context, "Content settings"),
+              buildAccountOptionRow(context, "Social Media"),
+              buildAccountOptionRow(context, "Language"),
+              buildAccountOptionRow(context, "Privacy and Policy"),
+              const SizedBox(
+                height: 40,
+              ),
+              const Row(
+                children: [
+                  Icon(
+                    Icons.volume_up_outlined,
+                    color: Colors.green,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "Notifications",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              const Divider(
+                height: 15,
+                thickness: 2,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              buildNotificationOptionRow("New update", true),
+              buildNotificationOptionRow("Account Status", false),
+              const SizedBox(
+                height: 50,
+              ),
+              Center(
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 40),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                  onPressed: () {},
+                  child: const Text("Lagout",
+                      style: TextStyle(
+                          fontSize: 16,
+                          letterSpacing: 2.2,
+                          color: Colors.black)),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
